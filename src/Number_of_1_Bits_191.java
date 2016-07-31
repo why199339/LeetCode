@@ -34,7 +34,7 @@ public class Number_of_1_Bits_191 {
 	 */
 	
 	/*
-	 * own: O(1)
+	 * own: O(n)
 	public static int hammingWeight(int n) {
 		String s = Integer.toBinaryString(n);
 		int count = 0;

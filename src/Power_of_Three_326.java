@@ -2,7 +2,6 @@
 public class Power_of_Three_326 {
 
 	public static void main(String[] args) {
-
 		System.out.println(isPowerOfThree(45));
 	}
 
