@@ -6,8 +6,6 @@ import java.util.Stack;
 public class Invert_Binary_Tree_226 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		TreeNode root = new TreeNode(4);
 		root.left = new TreeNode(2);
 		root.right = new TreeNode(7);
