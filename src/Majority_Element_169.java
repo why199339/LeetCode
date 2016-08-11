@@ -14,7 +14,6 @@ public class Majority_Element_169 {
 
 	//Moore voting algorithm
 	public static int majorityElement(int[] num) {
-
 		int major = num[0], count = 1;
 		for (int i = 1; i < num.length; i++) {
 			if (count == 0) {

@@ -17,7 +17,6 @@ public class Longest_Increasing_Subsequence_300 {
             dp[i] = x;
             if(i == len) len++;
         }
-
         return len;
 	}
 	
