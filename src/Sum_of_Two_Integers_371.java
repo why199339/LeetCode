@@ -10,7 +10,7 @@ public class Sum_of_Two_Integers_371 {
 	public static int getSum(int a, int b) {
 		int result = a ^ b;
 		int carry = (a & b) << 1;
-		if( carry!= 0 ) {
+		if( carry != 0 ) {
 			return getSum(result, carry);
 		}
 		return result;
