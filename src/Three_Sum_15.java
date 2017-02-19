@@ -22,10 +22,10 @@ public class Three_Sum_15 {
 				while (low < high) {
 					if (nums[low] + nums[high] == remain) {
 						outterlist.add(Arrays.asList(nums[i], nums[low], nums[high]));
-						while (nums[low] == nums[low + 1]) {
+						while (low < high && nums[low] == nums[low + 1]) {
 							low++;
 						}
-						while (nums[high] == nums[high - 1]) {
+						while (low < high && nums[high] == nums[high - 1]) {
 							high--;
 						}
 						low++;
