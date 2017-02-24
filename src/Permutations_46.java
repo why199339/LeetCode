@@ -5,13 +5,33 @@ public class Permutations_46 {
 
 	public static void main(String[] args) {
 		int[] nums = {1,2,3};
-		List<List<Integer>> list = permute(nums);
+		List<List<Integer>> list = permute_3(nums);
 		System.out.println(list);
 	}
 
+	public static List<List<Integer>> permute_3(int[] nums) {
+		List<List<Integer>> list = new ArrayList<>();
+		backtrack(list, new ArrayList<>(), nums);
+		return list;
+	}
 	
-	
-	public static List<List<Integer>> permute(int[] nums) {
+
+	private static void backtrack(List<List<Integer>> list, ArrayList temp, int[] nums) {
+		if(temp.size() == nums.length) {
+			list.add(new ArrayList<Integer>(temp));
+		} else {
+			for(int i = 0; i < nums.length; i++) {
+				if(temp.contains(nums[i])) {
+					continue;
+				} 
+				temp.add(nums[i]);
+				backtrack(list, temp, nums);
+				temp.remove(temp.size() - 1);
+			}
+		}
+	}
+
+	public static List<List<Integer>> permute_2(int[] nums) {
 		if (nums == null) {
 			return null;
 		}
@@ -44,8 +64,8 @@ public class Permutations_46 {
 		}
 	}
 	
-	/*
-	public static List<List<Integer>> permute(int[] num) {
+
+	public static List<List<Integer>> permute_1(int[] num) {
 	    List<List<Integer>> ans = new ArrayList<List<Integer>>();
 	    if (num.length ==0) return ans;
 	    List<Integer> l0 = new ArrayList<Integer>();
@@ -64,5 +84,5 @@ public class Permutations_46 {
 	    }
 	    return ans;
 	}
-	*/
+
 }
