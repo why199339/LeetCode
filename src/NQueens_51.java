@@ -37,8 +37,8 @@ public class NQueens_51 {
 				List<String> innerList = new ArrayList<>();
 				for (int i = 0; i < nums.length; i++) {
 					StringBuffer bf = new StringBuffer();
-					for(int j=0; j<nums.length; j++) {
-						if(nums[i] == j) {
+					for (int j = 0; j < nums.length; j++) {
+						if (nums[i] == j) {
 							bf.append("Q");
 						} else {
 							bf.append(".");

@@ -3,39 +3,36 @@ public class Climbing_Stairs_70 {
 
 	public static void main(String[] args) {
 
-		System.out.println(climbStairs(4));
+		System.out.println(climbStairs_Fibonacci(4));
 	}
 
-	public static int climbStairs(int n) {
-	    // base cases
-	    if(n <= 0) return 0;
-	    if(n == 1) return 1;
-	    if(n == 2) return 2;
+	// O(n),O(1)
+	public static int climbStairs_Fibonacci(int n) {
+		if (n == 1) {
+			return 1;
+		}
+		int first = 1;
+		int second = 2;
+		for (int i = 3; i <= n; i++) {
+			int third = first + second;
+			first = second;
+			second = third;
+		}
+		return second;
+	}
 
-	    int one_step_before = 2;
-	    int two_steps_before = 1;
-	    int all_ways = 0;
+	// O(n),O(n)
+	public static int climbStairs_dp(int n) {
+		int[] ways = new int[n];
+		if (n == 1) {
+			return 1;
+		}
+		ways[0] = 1;
+		ways[1] = 2;
+		for (int i = 2; i < n; i++) {
+			ways[i] = ways[i - 1] + ways[i - 2];
+		}
+		return ways[n - 1];
+	}
 
-	    for(int i=2; i<n; i++){
-	        all_ways = one_step_before + two_steps_before;
-	        two_steps_before = one_step_before;
-	        one_step_before = all_ways;
-	    }
-	    return all_ways;
-	}   
-	/*
-	 * own
-	public static int climbStairs(int n) {
-        int[] ways = new int[n];
-        if(n == 1) {
-        	return 1;
-        }
-        ways[0] = 1;
-        ways[1] = 2;
-        for(int i=2; i<n; i++) {
-        	ways[i] = ways[i-1] + ways[i-2];
-        }
-        return ways[n-1];
-    }
-    */
 }
