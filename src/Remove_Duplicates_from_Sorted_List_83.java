@@ -36,9 +36,7 @@ public class Remove_Duplicates_from_Sorted_List_83 {
 		return node;
 	}
 	
-	/*
-	 * own
-	public static ListNode deleteDuplicates(ListNode head) {
+	public static ListNode deleteDuplicates_own(ListNode head) {
 		if(head == null) {
 			return null;
 		}
@@ -55,5 +53,5 @@ public class Remove_Duplicates_from_Sorted_List_83 {
 		}
 		return result;
 	}
-	*/
+
 }
