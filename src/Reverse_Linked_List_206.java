@@ -16,35 +16,35 @@ public class Reverse_Linked_List_206 {
 		node3.next = node4;
 		node4.next = node5;
 		node5.next = null;
-		
-		ListNode node = reverseList(node1);
-		while(node != null) {
+
+		ListNode node = reverseList_Iterative(node1);
+		while (node != null) {
 			System.out.println(node.val);
 			node = node.next;
 		}
 	}
 
-	//iterative: O(n)
-	public static ListNode reverseList(ListNode head) {
-	    ListNode prev = null;
-	    ListNode curr = head;
-	    while (curr != null) {
-	        ListNode nextTemp = curr.next;
-	        curr.next = prev;
-	        prev = curr;
-	        curr = nextTemp;
-	    }
-	    return prev;
+	// O(n)
+	public static ListNode reverseList_Iterative(ListNode head) {
+		ListNode prev = null;
+		ListNode curr = head;
+		while (curr != null) {
+			ListNode nextTemp = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = nextTemp;
+		}
+		return prev;
 	}
 
-	/*
-	 * Recursive: O(n)
-	public static ListNode reverseList(ListNode head) {
-	    if (head == null || head.next == null) return head;
-	    ListNode p = reverseList(head.next);
-	    head.next.next = head;
-	    head.next = null;
-	    return p;
+	// O(n)
+	public static ListNode reverseList_Recursive(ListNode head) {
+		if (head == null || head.next == null)
+			return head;
+		ListNode p = reverseList_Recursive(head.next);
+		head.next.next = head;
+		head.next = null;
+		return p;
 	}
-	*/
+
 }
