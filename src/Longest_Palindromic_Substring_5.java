@@ -40,7 +40,8 @@ public class Longest_Palindromic_Substring_5 {
 	
 	/*
 	 * Dynamic Programming : Time complexity : O(n^2), Space complexity : O(n^2)
-	public static String longestPalindrome(String s) {
+	 */
+	public static String longestPalindrome_dp(String s) {
 		if (s.length() == 0) {
 			return "";
 		}
@@ -79,5 +80,4 @@ public class Longest_Palindromic_Substring_5 {
 		}
 		return s.substring(left, right + 1);
 	}
-	*/
 }

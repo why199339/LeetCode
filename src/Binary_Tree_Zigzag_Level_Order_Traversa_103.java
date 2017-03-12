@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
 
@@ -39,8 +40,7 @@ public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
         travel(curr.right, sol, level + 1);
     }
 	
-	/*
-	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+	public static List<List<Integer>> zigzagLevelOrder_2(TreeNode root) {
 		List<List<Integer>> outterList = new ArrayList<>();
         List<Integer> innerList = new ArrayList<>();
 		if(root == null) {
@@ -84,5 +84,4 @@ public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
         }
         return outterList;
     }
-    */
 }

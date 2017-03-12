@@ -10,7 +10,6 @@ public class Recover_Binary_Search_Tree_99 {
 	}
 
 	public static void recoverTree(TreeNode root) {
-
 		find(root);
 		int temp = first.val;
 		first.val = second.val;
