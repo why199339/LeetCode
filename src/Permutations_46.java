@@ -16,7 +16,7 @@ public class Permutations_46 {
 	}
 	
 
-	private static void backtrack(List<List<Integer>> list, ArrayList temp, int[] nums) {
+	private static void backtrack(List<List<Integer>> list, ArrayList<Integer> temp, int[] nums) {
 		if(temp.size() == nums.length) {
 			list.add(new ArrayList<Integer>(temp));
 		} else {

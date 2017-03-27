@@ -21,12 +21,12 @@ public class Linked_List_Cycle_141 {
 	// Two Pointers, Time complexity : O(n), Space complexity : O(1)
 	public static boolean hasCycle(ListNode head) {
 		if (head == null || head.next == null) {
-	        return false;
-	    }
+			return false;
+		}
 		ListNode slow = head;
 		ListNode fast = head.next;
-		while(slow != fast) {
-			if(fast == null || fast.next == null) {
+		while (slow != fast) {
+			if (fast == null || fast.next == null) {
 				return false;
 			}
 			slow = slow.next;
@@ -34,10 +34,9 @@ public class Linked_List_Cycle_141 {
 		}
 		return true;
 	}
-	
-	/*
-	 * own: Hash Table, Time complexity : O(n), Space complexity: O(n)
-	public static boolean hasCycle(ListNode head) {
+
+	// own: Hash Table, Time complexity : O(n), Space complexity: O(n)
+	public static boolean hasCycle_own(ListNode head) {
 		Set<ListNode> set = new HashSet<>();
 		while (head != null) {
 			if (!set.add(head)) {
@@ -48,5 +47,4 @@ public class Linked_List_Cycle_141 {
 		}
 		return false;
 	}
-	*/
 }

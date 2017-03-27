@@ -25,9 +25,7 @@ public class Valid_Parentheses_20 {
 		return stack.isEmpty();
 	}
 	
-	/*
-	 * own
-	public static boolean isValid(String s) {
+	public static boolean isValid_own(String s) {
 		List<Character> left = new ArrayList<>(Arrays.asList('(', '{', '['));
 		List<Character> right = new ArrayList<>(Arrays.asList(')', '}', ']'));
 		Stack<Character> stack = new Stack<>();
@@ -43,5 +41,4 @@ public class Valid_Parentheses_20 {
 		}
 		return stack.isEmpty();
 	}
-	*/
 }

@@ -9,7 +9,7 @@ public class Balanced_Binary_Tree_110 {
 	}
 
 	public static boolean isBalanced(TreeNode root) {
-		return dfsHeight (root) != -1;
+		return dfsHeight(root) != -1;
 	}
 
 	private static int dfsHeight(TreeNode root) {
@@ -25,27 +25,24 @@ public class Balanced_Binary_Tree_110 {
 			return -1;
 		return Math.max(leftHeight, rightHeight) + 1;
 	}
-	
-	
-	
-	/* O(n^2)
-	public static boolean isBalanced(TreeNode root) {
-        if(root == null) {
-        	return true;
-        }
-        int left = depth(root.left);
-        int right = depth(root.right);
-        if(left - right > 1 || right - left > 1) {
-        	return false;
-        }
-        return isBalanced(root.left) && isBalanced(root.right);
-    }
+
+	// O(n^2)
+	public static boolean isBalanced_2(TreeNode root) {
+		if (root == null) {
+			return true;
+		}
+		int left = depth(root.left);
+		int right = depth(root.right);
+		if (left - right > 1 || right - left > 1) {
+			return false;
+		}
+		return isBalanced(root.left) && isBalanced(root.right);
+	}
 
 	private static int depth(TreeNode root) {
-		if(root == null) {
+		if (root == null) {
 			return 0;
 		}
 		return 1 + Math.max(depth(root.left), depth(root.right));
 	}
-	*/
 }

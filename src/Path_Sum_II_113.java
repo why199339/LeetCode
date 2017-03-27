@@ -9,7 +9,7 @@ public class Path_Sum_II_113 {
 
 	public List<List<Integer>> pathSum(TreeNode root, int sum) {
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
-		find(root, sum, list, new ArrayList<>());
+		find(root, sum, list, new ArrayList<Integer>());
 		return list;
 	}
 
@@ -24,6 +24,6 @@ public class Path_Sum_II_113 {
 			find(root.left, sum - root.val, list, temp);
 			find(root.right, sum - root.val, list, temp);
 		}
-		temp.remove(root.val);
+		temp.remove(temp.size() - 1);
 	}
 }
