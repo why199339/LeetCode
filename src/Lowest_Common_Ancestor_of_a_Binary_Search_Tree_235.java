@@ -33,11 +33,10 @@ public class Lowest_Common_Ancestor_of_a_Binary_Search_Tree_235 {
 		}
 		return root;
 	}
-	
 
 	// Recursive
-	 public static TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
-    	return (root.val - p.val) * (root.val - q.val) < 1 ? root :
-           lowestCommonAncestor_2(p.val < root.val ? root.left : root.right, p, q);
-	 }
+	public static TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
+		return (root.val - p.val) * (root.val - q.val) < 1 ? root
+				: lowestCommonAncestor_2(p.val < root.val ? root.left : root.right, p, q);
+	}
 }

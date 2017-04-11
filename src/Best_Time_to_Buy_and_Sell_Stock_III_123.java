@@ -9,8 +9,23 @@ public class Best_Time_to_Buy_and_Sell_Stock_III_123 {
 		System.out.println(maxProfit_2(prices));
 	}
 
-	// O(nk), O(n)
+	// O(n), O(1)
 	public static int maxProfit_1(int[] prices) {
+		int maxProfit1 = 0;
+		int maxProfit2 = 0;
+		int lowestBuyPrice1 = Integer.MAX_VALUE;
+		int lowestBuyPrice2 = Integer.MAX_VALUE;
+		for (int p : prices) {
+			maxProfit2 = Math.max(maxProfit2, p - lowestBuyPrice2);
+			lowestBuyPrice2 = Math.min(lowestBuyPrice2, p - maxProfit1);
+			maxProfit1 = Math.max(maxProfit1, p - lowestBuyPrice1);
+			lowestBuyPrice1 = Math.min(lowestBuyPrice1, p);
+		}
+		return maxProfit2;
+	}
+
+	// O(nk), O(n)
+	public static int maxProfit_2(int[] prices) {
 		if (prices == null || prices.length == 0)
 			return 0;
 		int[] local = new int[3];
@@ -26,7 +41,7 @@ public class Best_Time_to_Buy_and_Sell_Stock_III_123 {
 	}
 
 	// O(nk), O(nk)
-	public static int maxProfit_2(int[] prices) {
+	public static int maxProfit_3(int[] prices) {
 		if (prices == null || prices.length == 0) {
 			return 0;
 		}

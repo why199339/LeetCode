@@ -1,8 +1,6 @@
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
 
 public class Majority_Element_169 {
 
@@ -27,20 +25,14 @@ public class Majority_Element_169 {
 		return major;
 	}
 
-	/*
-	 * sorting
-    public int majorityElement(int[] nums) {
+    public int majorityElement_sort(int[] nums) {
         Arrays.sort(nums);
       	int len = nums.length;
       	return nums[len/2];
     	}
-	 */
 	
-	/*
-	 * Hash Table
-	public static int majorityElement(int[] nums) {
+	public static int majorityElement_hashTable(int[] nums) {
 		Map<Integer, Integer> myMap = new HashMap<Integer, Integer>();
-	    //Hashtable<Integer, Integer> myMap = new Hashtable<Integer, Integer>();
 	    int ret=0;
 	    for (int num: nums) {
 	        if (!myMap.containsKey(num))
@@ -54,49 +46,5 @@ public class Majority_Element_169 {
     	}
    		return ret;
 	}
-	*/
 	
-	/*
-	 * Bit manipulation 
-	 public int majorityElement(int[] nums) {
-	    int ret = 0;
-    	for (int i = 0; i < 32; i++) {
-	        int ones = 0, zeros = 0;
-	        for (int j = 0; j < num.length; j++) {
-	            if ((num[j] & (1 << i)) != 0) {
-	                ++ones;
-	            }
-	            else
-	                ++zeros;
-        	}
-        }
-        if (ones > zeros)
-            ret |= (1 << i);
-    	}
-    	return ret;
-	}
-	 */
-	
-	/*
-	 * own
-	public static int majorityElement(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-			map.put(nums[i], 0);
-		}
-        for (int i = 0; i < nums.length; i++) {
-			if(map.containsKey(nums[i])) {
-				map.put(nums[i], map.get(nums[i]) + 1);
-			}
-		}
-        int len = nums.length;
-        int result = 0;
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-        	if(entry.getValue() > Math.floor(len/2)) {
-        		result = entry.getKey();
-        	}
-        }
-        return result;
-    }
-	*/
 }

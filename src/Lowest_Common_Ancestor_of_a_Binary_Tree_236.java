@@ -37,8 +37,8 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
         return left != null ? left : right;
 	}
 	
-	/*
-	public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	
+	public static TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null || p == null || q == null) {
 			return null;
 		}
@@ -81,5 +81,5 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
 		}
 		return found;
 	}
-	*/
+	
 }
