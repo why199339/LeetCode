@@ -32,12 +32,4 @@ public class Remove_Duplicates_from_Sorted_Array_26 {
 		return i + 1;
 	}
 
-	/*
-	 * public static int removeDuplicates(int[] nums) { if (nums == null ||
-	 * nums.length == 0) { return 0; } int p1 = 1; int p2 = 1; int count = 0;
-	 * while (p1 < nums.length && p2 < nums.length) { if(nums[p1] > nums[p1 -
-	 * 1]) { p1++; } if(nums[p2] == nums[p1 - 1]) { p2++; } else { int temp =
-	 * nums[p1]; nums[p1] = nums[p2]; nums[p2] = temp; count ++; p1++; p2++; } }
-	 * return p1; }
-	 */
 }

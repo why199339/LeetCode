@@ -15,73 +15,73 @@ public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
 		System.out.println(list);
 	}
 
-	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) 
-    {
-        List<List<Integer>> sol = new ArrayList<>();
-        travel(root, sol, 0);
-        return sol;
-    }
-    
-    private static void travel(TreeNode curr, List<List<Integer>> sol, int level)
-    {
-        if(curr == null) return;
-        
-        if(sol.size() <= level)
-        {
-            List<Integer> newLevel = new LinkedList<>();
-            sol.add(newLevel);
-        }
-        
-        List<Integer> collection  = sol.get(level);
-        if(level % 2 == 0) collection.add(curr.val);
-        else collection.add(0, curr.val);
-        
-        travel(curr.left, sol, level + 1);
-        travel(curr.right, sol, level + 1);
-    }
-	
+	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		List<List<Integer>> sol = new ArrayList<>();
+		travel(root, sol, 0);
+		return sol;
+	}
+
+	private static void travel(TreeNode curr, List<List<Integer>> sol, int level) {
+		if (curr == null)
+			return;
+
+		if (sol.size() <= level) {
+			List<Integer> newLevel = new LinkedList<>();
+			sol.add(newLevel);
+		}
+
+		List<Integer> collection = sol.get(level);
+		if (level % 2 == 0)
+			collection.add(curr.val);
+		else
+			collection.add(0, curr.val);
+
+		travel(curr.left, sol, level + 1);
+		travel(curr.right, sol, level + 1);
+	}
+
 	public static List<List<Integer>> zigzagLevelOrder_2(TreeNode root) {
 		List<List<Integer>> outterList = new ArrayList<>();
-        List<Integer> innerList = new ArrayList<>();
-		if(root == null) {
-        	return outterList;
-        }
-        Stack<TreeNode> current = new Stack<>();
-        Stack<TreeNode> next = new Stack<>();
-        current.push(root);
-        boolean isOdd = true;
-        while(!current.isEmpty() || !next.isEmpty()) {
-        	TreeNode node = current.pop();
-        	if(node != null) {
-        		innerList.add(node.val);
-        	} else {
-        		innerList.add(null);
-        	}
-        	if(isOdd) {
-        		if(node.left != null) {
-        			next.push(node.left);
-        		}
-        		if(node.right != null) {
-        			next.push(node.right);
-        		}
-        	}
-        	if(!isOdd) {
-        		if(node.right != null) {
-        			next.push(node.right);
-        		}
-        		if(node.left != null) {
-        			next.push(node.left);
-        		}
-        	}
-        	if(current.isEmpty()) {
-        		Stack<TreeNode> temp = current;
-        		current = next;
-        		next = temp;
-        		isOdd = !isOdd;
-        		outterList.add(innerList);
-        		innerList = new ArrayList<>();
-        	}
-        }
-        return outterList;
-    }
+		List<Integer> innerList = new ArrayList<>();
+		if (root == null) {
+			return outterList;
+		}
+		Stack<TreeNode> current = new Stack<>();
+		Stack<TreeNode> next = new Stack<>();
+		current.push(root);
+		boolean isOdd = true;
+		while (!current.isEmpty() || !next.isEmpty()) {
+			TreeNode node = current.pop();
+			if (node != null) {
+				innerList.add(node.val);
+			} else {
+				innerList.add(null);
+			}
+			if (isOdd) {
+				if (node.left != null) {
+					next.push(node.left);
+				}
+				if (node.right != null) {
+					next.push(node.right);
+				}
+			}
+			if (!isOdd) {
+				if (node.right != null) {
+					next.push(node.right);
+				}
+				if (node.left != null) {
+					next.push(node.left);
+				}
+			}
+			if (current.isEmpty()) {
+				Stack<TreeNode> temp = current;
+				current = next;
+				next = temp;
+				isOdd = !isOdd;
+				outterList.add(innerList);
+				innerList = new ArrayList<>();
+			}
+		}
+		return outterList;
+	}
 }

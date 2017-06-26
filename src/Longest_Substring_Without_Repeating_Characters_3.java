@@ -18,22 +18,21 @@ public class Longest_Substring_Without_Repeating_Characters_3 {
 	public static int lengthOfLongestSubstring(String s) {
 		int ans = 0;
 		int[] index = new int[128];
-		for(int i = 0, j = 0; j < s.length(); j++) {
+		for (int i = 0, j = 0; j < s.length(); j++) {
 			i = Math.max(i, index[s.charAt(j)]);
 			ans = Math.max(j - i + 1, ans);
 			index[s.charAt(j)] = j + 1;
 		}
 		return ans;
 	}
-	
-	
-	/*
-	 * Sliding Window Optimized(Using HashMap) : Time complexity : O(n), Space complexity (HashMap) : O(min(m,n))
-	public static int lengthOfLongestSubstring(String s) {
+
+	// Sliding Window Optimized(Using HashMap) : Time complexity : O(n), Space
+	// complexity (HashMap) : O(min(m,n))
+	public static int lengthOfLongestSubstring2(String s) {
 		int ans = 0;
 		HashMap<Character, Integer> map = new HashMap<>();
-		for(int i = 0, j = 0; j < s.length(); j++) {
-			if(map.containsKey(s.charAt(j))) {
+		for (int i = 0, j = 0; j < s.length(); j++) {
+			if (map.containsKey(s.charAt(j))) {
 				i = Math.max(i, map.get(s.charAt(j)));
 			}
 			ans = Math.max(ans, j - i + 1);
@@ -41,11 +40,10 @@ public class Longest_Substring_Without_Repeating_Characters_3 {
 		}
 		return ans;
 	}
-	/*
-	
-	/*
-	 * Sliding Window : Time complexity : O(2n)=O(n), Space complexity : O(min(m,n))
-	public static int lengthOfLongestSubstring(String s) {
+
+	// Sliding Window : Time complexity : O(2n)=O(n), Space complexity :
+	// O(min(m,n))
+	public static int lengthOfLongestSubstring3(String s) {
 		int i = 0;
 		int j = 0;
 		int ans = 0;
@@ -60,5 +58,4 @@ public class Longest_Substring_Without_Repeating_Characters_3 {
 		}
 		return ans;
 	}
-	*/
 }

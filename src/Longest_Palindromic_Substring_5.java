@@ -7,7 +7,7 @@ public class Longest_Palindromic_Substring_5 {
 	}
 
 	/*
-	 * Time complexity : O(n^2), Space complexity : O(n^2)
+	 * Time complexity : O(n^2), Space complexity : O(1)
 	 */
 	public static String longestPalindrome(String s) {
 		if (s.length() == 0) {
