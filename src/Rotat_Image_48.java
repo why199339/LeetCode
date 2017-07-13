@@ -7,7 +7,7 @@ public class Rotat_Image_48 {
 
 	public static void rotate(int[][] matrix) {
 		int start = 0;
-		int end = matrix[0].length - 1;
+		int end = matrix.length - 1;
 		while (start < end) {
 			int[] temp = matrix[start];
 			matrix[start] = matrix[end];

@@ -50,6 +50,7 @@ public class Course_Schedule_II_210 {
 	}
 
 	
+	@SuppressWarnings("unused")
 	private int[] solveByDFS(List<List<Integer>> adjs) {
 	    BitSet hasCycle = new BitSet(1);
 	    BitSet visited = new BitSet(adjs.size());

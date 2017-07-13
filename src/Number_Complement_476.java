@@ -8,7 +8,7 @@ public class Number_Complement_476 {
 	public static int findComplement(int num) {
 		return ~num & (Integer.highestOneBit(num) - 1);
 	}
-	
+
 	public static int findComplement_own(int num) {
 		String n = Integer.toBinaryString(num);
 		char[] chs = n.toCharArray();

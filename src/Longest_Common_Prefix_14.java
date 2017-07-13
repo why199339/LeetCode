@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 
 public class Longest_Common_Prefix_14 {
 
@@ -12,8 +9,7 @@ public class Longest_Common_Prefix_14 {
 
 	// Binary search
 	// Time complexity : O(S∗log(n)), where S is the sum of all characters in
-	// all strings.
-	// Space complexity : O(1)
+	// all strings. Space complexity : O(1)
 	public static String longestCommonPrefix(String[] strs) {
 		if (strs == null || strs.length == 0)
 			return "";
@@ -59,7 +55,7 @@ public class Longest_Common_Prefix_14 {
 		}
 	}
 
-	String commonPrefix(String left, String right) {
+	private String commonPrefix(String left, String right) {
 		int min = Math.min(left.length(), right.length());
 		for (int i = 0; i < min; i++) {
 			if (left.charAt(i) != right.charAt(i))
@@ -84,7 +80,7 @@ public class Longest_Common_Prefix_14 {
 	}
 
 	// Horizontal scanning, Time complexity : O(S) , where S is the sum of all
-	// characters in all strings. Space complexity : O(1)O(1)O(1)
+	// characters in all strings. Space complexity : O(1)
 	public static String longestCommonPrefix1(String[] strs) {
 		if (strs.length == 0)
 			return "";

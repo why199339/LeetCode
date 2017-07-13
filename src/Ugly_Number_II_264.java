@@ -28,33 +28,5 @@ public class Ugly_Number_II_264 {
 		return ugly[n - 1];
 	}
 	
-	/* Time Limit Exceeded 
-	public static int nthUglyNumber(int n) {
-		if(n < 0) {
-			return 0;
-		}
-		int count = 0;
-		int number = 0;
-		while(count != n) {
-			number ++;
-			if(isUgly(number)) {
-				count ++;
-			}
-		}
-		return number;
-    }
 	
-	private static boolean isUgly(int number) {
-		while(number % 2 == 0) {
-			number = number / 2;
-		}
-		while(number % 3 == 0) {
-			number = number / 3;
-		}
-		while(number % 5 == 0) {
-			number = number / 5;
-		}
-		return number == 1;
-	}
-	*/
 }

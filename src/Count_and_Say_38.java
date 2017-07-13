@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Count_and_Say_38 {
 
 	public static void main(String[] args) {

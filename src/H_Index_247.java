@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class H_Index_247 {
 

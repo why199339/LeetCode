@@ -12,7 +12,7 @@ public class Contains_Duplicate_III_220 {
 			return false;
 		Map<Long, Long> d = new HashMap<>();
 		long w = (long) t + 1;
-		for (int i = 0; i < nums.length; ++i) {
+		for (int i = 0; i < nums.length; i++) {
 			long m = getID(nums[i], w);
 			if (d.containsKey(m))
 				return true;

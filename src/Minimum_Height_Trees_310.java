@@ -24,7 +24,6 @@ public class Minimum_Height_Trees_310 {
 		for (int i = 0; i < n; ++i)
 			if (adj.get(i).size() == 1)
 				leaves.add(i);
-
 		while (n > 2) {
 			n -= leaves.size();
 			List<Integer> newLeaves = new ArrayList<>();

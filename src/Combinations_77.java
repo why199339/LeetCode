@@ -19,12 +19,12 @@ public class Combinations_77 {
 		if (remain == 0) {
 			list.add(new ArrayList<Integer>(temp));
 		} else {
-			for (int i = start; i <= n ; i++) {
+			for (int i = start; i <= n; i++) {
 				if (temp.contains(i)) {
 					continue;
 				}
 				temp.add(i);
-				backtrack(list, temp, n, remain - 1, i+1);
+				backtrack(list, temp, n, remain - 1, i + 1);
 				temp.remove(temp.size() - 1);
 			}
 		}

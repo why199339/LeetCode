@@ -46,6 +46,7 @@ public class Find_Mode_in_Binary_Search_Tree_501 {
 		inorder(root.right);
 	}
 
+	@SuppressWarnings("unused")
 	private void inorder_morris(TreeNode root) {
 		if (root == null) {
 			return;

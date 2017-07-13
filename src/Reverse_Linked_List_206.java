@@ -1,5 +1,3 @@
-import java.util.Iterator;
-import java.util.LinkedList;
 
 public class Reverse_Linked_List_206 {
 
@@ -26,15 +24,19 @@ public class Reverse_Linked_List_206 {
 
 	// O(n)
 	public static ListNode reverseList_Iterative(ListNode head) {
+		ListNode reverseHead = null;
 		ListNode prev = null;
-		ListNode curr = head;
-		while (curr != null) {
-			ListNode nextTemp = curr.next;
-			curr.next = prev;
-			prev = curr;
-			curr = nextTemp;
+		ListNode cur = head;
+		while (cur != null) {
+			ListNode next = cur.next;
+			if (next == null) {
+				reverseHead = cur;
+			}
+			cur.next = prev;
+			prev = cur;
+			cur = next;
 		}
-		return prev;
+		return reverseHead;
 	}
 
 	// O(n)

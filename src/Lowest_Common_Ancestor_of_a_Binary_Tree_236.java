@@ -1,6 +1,4 @@
 import java.util.LinkedList;
-import java.util.Stack;
-
 
 public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
 
@@ -33,11 +31,11 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
 			return root;
 		TreeNode left = lowestCommonAncestor(root.left, p, q);
 		TreeNode right = lowestCommonAncestor(root.right, p, q);
-		if(left != null && right != null)   return root;
-        return left != null ? left : right;
+		if (left != null && right != null)
+			return root;
+		return left != null ? left : right;
 	}
-	
-	
+
 	public static TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null || p == null || q == null) {
 			return null;
@@ -53,9 +51,9 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
 		int index1 = 0;
 		int index2 = 0;
 		TreeNode commonNode = null;
-		while(index1 != path1.size() && index2 != path2.size()) {
-			if(path1.get(index1) == path2.get(index2)) {
-				commonNode= path1.get(index1);
+		while (index1 != path1.size() && index2 != path2.size()) {
+			if (path1.get(index1) == path2.get(index2)) {
+				commonNode = path1.get(index1);
 			}
 			index1++;
 			index2++;
@@ -81,5 +79,5 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_236 {
 		}
 		return found;
 	}
-	
+
 }

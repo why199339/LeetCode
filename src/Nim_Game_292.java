@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 public class Nim_Game_292 {
 
 	public static void main(String[] args) {

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Remove_Nth_Node_From_End_of_List_19 {
 
@@ -35,8 +34,8 @@ public class Remove_Nth_Node_From_End_of_List_19 {
 	    return dummy.next;
 	}
 	
-	/* Two pass algorithm
-	public static ListNode removeNthFromEnd(ListNode head, int n) {
+	// Two pass algorithm
+	public static ListNode removeNthFromEnd_2(ListNode head, int n) {
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;
 		ListNode first = head;
@@ -52,29 +51,5 @@ public class Remove_Nth_Node_From_End_of_List_19 {
 		first.next = first.next.next;
 		return dummy.next;
 	}
-	*/
 	
-	/* own
-	public static ListNode removeNthFromEnd(ListNode head, int n) {
-		int len = 0;
-		ListNode cur = head;
-		while (cur != null) {
-			len++;
-			cur = cur.next;
-		}
-		cur = head;
-		for (int i = 1; i < len - n; i++) {
-			cur = cur.next;
-		}
-		if(cur.next == null) {
-			return null;
-		}
-		if(len == n) {
-			head= head.next;
-			return head;
-		}
-		cur.next = cur.next.next;
-		return head;
-	}
-	*/
 }

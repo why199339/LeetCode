@@ -5,6 +5,7 @@ public class Valid_Perfect_Square_367 {
 
 	}
 
+	// O(sqrt(n))
 	public boolean isPerfectSquare_math(int num) {
 		int i = 1;
 		while (num > 0) {
@@ -14,6 +15,7 @@ public class Valid_Perfect_Square_367 {
 		return num == 0;
 	}
 
+	// O(logN)
 	public boolean isPerfectSquare_binarySearch(int num) {
 		long low = 1;
 		long high = num;

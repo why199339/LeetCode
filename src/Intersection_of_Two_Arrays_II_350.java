@@ -7,11 +7,9 @@ import java.util.Set;
 public class Intersection_of_Two_Arrays_II_350 {
 
 	public static void main(String[] args) {
-
-		int[] nums1 = { 2, 2, 1, 3};
+		int[] nums1 = { 2, 2, 1, 3 };
 		int[] nums2 = { 2, 2 };
 		int[] nums3 = intersect(nums1, nums2);
-
 		System.out.println(Arrays.toString(nums3));
 	}
 

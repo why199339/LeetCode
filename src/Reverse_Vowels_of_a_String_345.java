@@ -8,34 +8,30 @@ public class Reverse_Vowels_of_a_String_345 {
 	}
 
 	public static String reverseVowels(String s) {
-		if(s == null || s.length()==0) return s;
-	    String vowels = "aeiouAEIOU";
-	    char[] chars = s.toCharArray();
-	    int start = 0;
-	    int end = s.length()-1;
-	    while(start<end){
-	        
-	        while(start<end && !vowels.contains(chars[start]+"")){
-	            start++;
-	        }
-	        
-	        while(start<end && !vowels.contains(chars[end]+"")){
-	            end--;
-	        }
-	        
-	        char temp = chars[start];
-	        chars[start] = chars[end];
-	        chars[end] = temp;
-	        
-	        start++;
-	        end--;
-	    }
-	    return new String(chars);
+		if (s == null || s.length() == 0)
+			return s;
+		String vowels = "aeiouAEIOU";
+		char[] chars = s.toCharArray();
+		int start = 0;
+		int end = s.length() - 1;
+		while (start < end) {
+			while (start < end && !vowels.contains(chars[start] + "")) {
+				start++;
+			}
+			while (start < end && !vowels.contains(chars[end] + "")) {
+				end--;
+			}
+			char temp = chars[start];
+			chars[start] = chars[end];
+			chars[end] = temp;
+			start++;
+			end--;
+		}
+		return new String(chars);
 	}
-	
-	/* own
-	public static String reverseVowels(String s) {
-		if(s == null) {
+
+	public static String reverseVowels_own(String s) {
+		if (s == null) {
 			return null;
 		}
 		HashSet<Character> set = new HashSet<>();
@@ -53,7 +49,7 @@ public class Reverse_Vowels_of_a_String_345 {
 		int i = 0;
 		int j = s.length() - 1;
 		while (i < j) {
-			if(set.contains(b[i]) && set.contains(b[j])) {
+			if (set.contains(b[i]) && set.contains(b[j])) {
 				char temp = b[i];
 				b[i] = b[j];
 				b[j] = temp;
@@ -61,7 +57,6 @@ public class Reverse_Vowels_of_a_String_345 {
 				j--;
 				continue;
 			}
-			
 			if (!set.contains(b[i])) {
 				i++;
 			}
@@ -71,5 +66,4 @@ public class Reverse_Vowels_of_a_String_345 {
 		}
 		return new String(b);
 	}
-	*/
 }

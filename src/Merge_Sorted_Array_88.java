@@ -17,48 +17,16 @@ public class Merge_Sorted_Array_88 {
 		int p = m - 1;
 		int q = n - 1;
 		int r = m + n - 1;
-		while(p >= 0 && q >=0) {
-			if(nums1[p] >= nums2[q]) {
+		while (p >= 0 && q >= 0) {
+			if (nums1[p] >= nums2[q]) {
 				nums1[r--] = nums1[p--];
 			} else {
 				nums1[r--] = nums2[q--];
 			}
 		}
-		while(q >= 0) {
+		while (q >= 0) {
 			nums1[r--] = nums2[q--];
 		}
 	}
-	
-	/* own
-	public static void merge(int[] nums1, int m, int[] nums2, int n) {
-		int[] num = new int[m + n];
-		int p = 0;
-		int q = 0;
-		for (int i = 0; i < num.length; i++) {
-			if (p >= m) {
-				num[i] = nums2[q];
-				q++;
-				continue;
-			}
-			if(q >= n){
-				num[i] = nums1[p];
-				p++;
-				continue;
-			}
-			if (nums1[p] <= nums2[q]) {
-				num[i] = nums1[p];
-				p++;
-				continue;
-			} 
-			if (nums1[p] > nums2[q]) {
-				num[i] = nums2[q];
-				q++;
-				continue;
-			}
-		}
-		for (int i = 0; i < num.length; i++) {
-			nums1[i] = num[i];
-		}
-	}
-	*/
+
 }

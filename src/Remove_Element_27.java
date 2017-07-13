@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Remove_Element_27 {
 

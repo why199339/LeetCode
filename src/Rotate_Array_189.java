@@ -26,8 +26,8 @@ public class Rotate_Array_189 {
 		}
 	}
 	
-	/* Using Cyclic Replacements : Time complexity : O(n), Space complexity : O(1)
-	public static void rotate(int[] nums, int k) {
+	// Using Cyclic Replacements : Time complexity : O(n), Space complexity : O(1)
+	public static void rotate_2(int[] nums, int k) {
 		k = k % nums.length;
 		int count = 0;
 		for(int start = 0; count < nums.length; start++) {
@@ -43,10 +43,9 @@ public class Rotate_Array_189 {
 			} while(current != start);
 		}
 	}
-	*/
 	
-	/* Using Extra Array: Time complexity : O(n), Space complexity : O(n)
-	public static void rotate(int[] nums, int k) {
+	// Using Extra Array: Time complexity : O(n), Space complexity : O(n)
+	public static void rotate_3(int[] nums, int k) {
 		int[] a = new int[nums.length];
 		for (int i = 0; i < nums.length; i++) {
 			a[(i + k) % nums.length] = nums[i];
@@ -55,19 +54,5 @@ public class Rotate_Array_189 {
 			nums[i] = a[i];
 		}
 	}
-	*/
-	/* Brute Force [Time Limit Exceeded]: time complexity : O(n∗k), Space complexity : O(1)
-	public static void rotate(int[] nums, int k) {
-		if (nums == null) {
-			return;
-		}
-		for (int i = 0; i < k; i++) {
-			int temp = nums[nums.length - 1];
-			for (int j = nums.length - 1; j > 0; j--) {
-				nums[j] = nums[j - 1];
-			}
-			nums[0] = temp;
-		}
-	}
-	*/
+	
 }

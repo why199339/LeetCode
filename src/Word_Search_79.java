@@ -20,7 +20,7 @@ public class Word_Search_79 {
 		if (k == word.length()) {
 			return true;
 		}
-		if (i > board.length-1 || i < 0 || j > board[0].length-1 || j < 0 || board[i][j] != word.charAt(k)) {
+		if (i > board.length - 1 || i < 0 || j > board[0].length - 1 || j < 0 || board[i][j] != word.charAt(k)) {
 			return false;
 		}
 		board[i][j] = '*';

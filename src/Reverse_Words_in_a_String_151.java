@@ -1,4 +1,3 @@
-import javax.xml.crypto.Data;
 
 public class Reverse_Words_in_a_String_151 {
 
@@ -18,8 +17,8 @@ public class Reverse_Words_in_a_String_151 {
 		return out + parts[0];
 	}
 	
-	/*
-	public static String reverseWords(String s) {
+	
+	public static String reverseWords_own(String s) {
 		if (s == null) {
 			return null;
 		}
@@ -49,5 +48,4 @@ public class Reverse_Words_in_a_String_151 {
 		}
 		return new String(arr);
 	}
-	*/
 }

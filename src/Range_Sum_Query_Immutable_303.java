@@ -1,5 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
 
 public class Range_Sum_Query_Immutable_303 {
 

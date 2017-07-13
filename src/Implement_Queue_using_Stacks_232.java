@@ -6,18 +6,7 @@ public class Implement_Queue_using_Stacks_232 {
 	private static Stack<Integer> stack2 = new Stack<>();
 	
 	public static void main(String[] args) {
-		Implement_Queue_using_Stacks_232 q = new Implement_Queue_using_Stacks_232();
-		q.push(1);
-		q.push(2);
-		q.push(3);
-		q.pop();
-		System.out.println(q.peek());
-		q.push(4);
-		q.pop();
-		System.out.println(q.peek());
-		q.pop();
-		System.out.println(q.peek());
-
+		
 	}
 
 	// Push element x to the back of queue.

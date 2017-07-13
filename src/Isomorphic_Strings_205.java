@@ -1,7 +1,5 @@
 import java.util.HashMap;
 
-import javax.print.attribute.HashAttributeSet;
-
 public class Isomorphic_Strings_205 {
 
 	public static void main(String[] args) {

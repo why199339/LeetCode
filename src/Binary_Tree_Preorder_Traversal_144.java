@@ -8,17 +8,46 @@ public class Binary_Tree_Preorder_Traversal_144 {
 
 	}
 
-	public List<Integer> preorderTraversal(TreeNode root) {
-		Stack<TreeNode> rights = new Stack<>();
+	public List<Integer> preorderTraversal_best(TreeNode root) {
 		List<Integer> list = new ArrayList<>();
-		while (root != null) {
-			list.add(root.val);
-			if (root.right != null) {
-				rights.push(root.right);
+		TreeNode cur1 = root;
+		TreeNode cur2 = null;
+		while(cur1 != null) {
+			cur2 = cur1.left;
+			if(cur2 != null) {
+				while(cur2.right != null && cur2.right != cur1) {
+					cur2 = cur2.right;
+				}
+				if(cur2.right == null) {
+					cur2.right = cur1;
+					list.add(cur1.val);
+					cur1 = cur1.left;
+					continue;
+				} else {
+					cur2.right = null;
+				}
+			} else {
+				list.add(cur1.val);
 			}
-			root = root.left;
-			if (root == null && !rights.isEmpty()) {
-				root = rights.pop();
+			cur1 = cur1.right;
+		}
+		return list;
+	}
+
+	public List<Integer> preorderTraversal(TreeNode root) {
+		List<Integer> list = new ArrayList<Integer>();
+		if (root != null) {
+			Stack<TreeNode> stack = new Stack<>();
+			stack.add(root);
+			while (!stack.isEmpty()) {
+				root = stack.pop();
+				list.add(root.val);
+				if (root.right != null) {
+					stack.push(root.right);
+				}
+				if (root.left != null) {
+					stack.push(root.left);
+				}
 			}
 		}
 		return list;

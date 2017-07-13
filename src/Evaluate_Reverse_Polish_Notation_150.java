@@ -4,7 +4,6 @@ import java.util.Stack;
 public class Evaluate_Reverse_Polish_Notation_150 {
 
 	public static void main(String[] args) {
-		int a = -5;
 		System.out.println(String.valueOf(-5));
 		String[] tokens = { "4", "-2", "/", "2", "-3", "-", "-" };
 		System.out.println(evalRPN(tokens));

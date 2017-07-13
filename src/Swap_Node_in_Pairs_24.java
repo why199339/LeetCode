@@ -1,4 +1,3 @@
-import org.w3c.dom.Node;
 
 public class Swap_Node_in_Pairs_24 {
 

@@ -5,16 +5,16 @@ public class Diameter_of_Binary_Tree_543 {
 
 	}
 
-    public int diameterOfBinaryTree(TreeNode root) {
-    	if(root == null) {
-    		return 0;
-    	}
-        int[] record = new int[1];
-        return postOrder(root, record) - 1;
-    }
+	public int diameterOfBinaryTree(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		int[] record = new int[1];
+		return postOrder(root, record) - 1;
+	}
 
 	private int postOrder(TreeNode root, int[] record) {
-		if(root == null) {
+		if (root == null) {
 			record[0] = 0;
 			return 0;
 		}

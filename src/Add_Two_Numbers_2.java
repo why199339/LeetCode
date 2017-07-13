@@ -1,25 +1,8 @@
-import java.util.ArrayList;
 
 public class Add_Two_Numbers_2 {
 
 	public static void main(String[] args) {
 
-		ListNode l1 = new ListNode(1);
-		l1.next = new ListNode(2);
-		l1.next.next = new ListNode(4);
-		l1.next.next.next = new ListNode(3);
-		l1.next.next.next.next = null;
-
-		ListNode l2 = new ListNode(5);
-		l2.next = new ListNode(6);
-		l2.next.next = new ListNode(4);
-		l2.next.next.next = null;
-
-		ListNode l = addTwoNumbers(l1, l2);
-		while (l != null) {
-			System.out.print(l.val + " ");
-			l = l.next;
-		}
 	}
 
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

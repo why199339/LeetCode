@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Reverse_Integer_7 {
 
@@ -17,7 +15,7 @@ public class Reverse_Integer_7 {
 		while (x != 0) {
 			int tail = x % 10;
 			int temp = result * 10 + tail;
-			if((temp - tail) / 10 != result) {
+			if ((temp - tail) / 10 != result) {
 				return 0;
 			}
 			result = temp;

@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
+public class Binary_Tree_Zigzag_Level_Order_Traversal_103 {
 
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(3);
@@ -24,18 +24,15 @@ public class Binary_Tree_Zigzag_Level_Order_Traversa_103 {
 	private static void travel(TreeNode curr, List<List<Integer>> sol, int level) {
 		if (curr == null)
 			return;
-
 		if (sol.size() <= level) {
 			List<Integer> newLevel = new LinkedList<>();
 			sol.add(newLevel);
 		}
-
 		List<Integer> collection = sol.get(level);
 		if (level % 2 == 0)
 			collection.add(curr.val);
 		else
 			collection.add(0, curr.val);
-
 		travel(curr.left, sol, level + 1);
 		travel(curr.right, sol, level + 1);
 	}

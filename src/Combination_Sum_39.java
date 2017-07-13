@@ -5,7 +5,7 @@ import java.util.List;
 public class Combination_Sum_39 {
 
 	public static void main(String[] args) {
-		int[] candidates = {2,3,6,7};
+		int[] candidates = { 2, 3, 6, 7 };
 		int target = 7;
 		System.out.println(combinationSum(candidates, target));
 	}
@@ -17,7 +17,8 @@ public class Combination_Sum_39 {
 		return list;
 	}
 
-	private static void backtrack(List<List<Integer>> list, ArrayList<Integer> temp, int[] candidates, int remain, int start) {
+	private static void backtrack(List<List<Integer>> list, ArrayList<Integer> temp, int[] candidates, int remain,
+			int start) {
 		if (remain < 0) {
 			return;
 		} else if (remain == 0) {

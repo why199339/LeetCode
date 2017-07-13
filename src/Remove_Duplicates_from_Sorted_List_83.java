@@ -26,11 +26,11 @@ public class Remove_Duplicates_from_Sorted_List_83 {
 			return null;
 		}
 		ListNode node = head;
-		while(head.next != null) {
-			if(head.next.val == head.val) {
-				head.next = head.next.next;
+		while(node.next != null) {
+			if(node.next.val == node.val) {
+				node.next = node.next.next;
 			} else {
-				head = head.next;
+				node = node.next;
 			}
 		}
 		return node;

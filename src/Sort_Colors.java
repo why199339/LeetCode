@@ -13,7 +13,6 @@ public class Sort_Colors {
 		int zero = 0;
 		int two = nums.length - 1;
 		for (int i = 0; i <= two; i++) {
-			
 			while (nums[i] == 0 && i > zero) {
 				int temp = nums[i];
 				nums[i] = nums[zero];
